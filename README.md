@@ -1,6 +1,6 @@
 # fractals
 
-Little rusty program to ptint fractals to your terminal! Output matches the size of your terminal window.
+Little rusty program to print fractals to your terminal! Output matches the size of your terminal window.
 
 `cargo run --release --bin mandelbrot`
 ```
