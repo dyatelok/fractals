@@ -1,4 +1,5 @@
-use fractals::{term_transform, Bounds, Mandelbrot, Size};
+use fractals::{term_transform, Bounds, Julia, Size};
+use num::complex::Complex64;
 use terminal_size::{terminal_size, Height, Width};
 
 fn main() {
@@ -12,8 +13,8 @@ fn main() {
     let h = h - 1 + h % 2;
 
     let size = Size::new(w, h);
-    let bounds = Bounds::new(-2.0, 1.0, -1.0, 1.0);
-    let set = Mandelbrot::new(size, bounds, 1000);
+    let bounds = Bounds::new(-1.5, 1.5, -1.5, 1.5);
+    let set = Julia::new(size, bounds, 1000, Complex64::new(0.0, 0.7));
 
     print!("{}", set);
 }
